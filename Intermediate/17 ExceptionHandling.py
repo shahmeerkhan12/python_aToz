@@ -9,12 +9,15 @@ try :
    numerator=int(input("please input a number to be divided: "))
    denumerator=int(input("please input a divisor: "))
    result=numerator/denumerator
+
 except ZeroDivisionError as e:
    print(e)
    # print("You cannot divide by Zero!")
+
 except ValueError as e:
    print(e)
    print("Please input only integer")
+   
 except Exception as e:
    print(e)
    print("Something went wrong:(")
