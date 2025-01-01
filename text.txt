@@ -1,0 +1,2 @@
+This is being is accessed by a python script that is located
+in the same directory.

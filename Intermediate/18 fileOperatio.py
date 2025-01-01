@@ -1,7 +1,11 @@
+# file operations in python:
+# we will use the python 'os' and 'shuttle' libraries for file operations and manipulation
+
 import os
 
-
+# before writing or reading from a file, First:
 # let we check whether a file\location exist in our computer
+
 path = "C:\\Users\\Shamir Khan\\PYTHON PROJECTS LOCAL"
 
 if (os.path.exists(path)) :
@@ -13,23 +17,26 @@ if (os.path.exists(path)) :
 else:
    print("the location doesn't exists!")
 
-   # lets read from a file
-print()
+print('___________________________________')
+
+# lets read from a file
+
 print('Reading the file')
+print('___________________________________')
 
 # when the file and the program are in the same directory
 
-# with open('test.txt') as file: 
-#    print(file.read())
+with open('text.txt') as file: 
+   print(file.read())
 
-# now the file is in some other location, just copy the file location
-# with open("C:\\Users\\Shamir Khan\\Videos\\hello.txt") as file :
-#       print(file.read())
+# now what if the FILE is in some other LOCATION/DIR, just copy the FILE LOCATION
 
-# if a file does not exist then do the follwing
+print('___________________________________')
+
+# it is often a good practice to include the try, except statements:
 
 try :
-      with open("C:\\Users\\Shamir Khan\\PYTHON PROJECTS LOCAL\\1tes t.txt") as file :
+      with open("C:\\Users\\Shamir Khan\\PYTHON PROJECTS LOCAL\\1test.txt") as file :
          print(file.read())
 except FileNotFoundError :
     print("That file was not found :")
