@@ -1,9 +1,5 @@
 # performing some useful operations on lists
 
-from operator import truediv
-from pickle import TRUE
-
-
 sports = ["Football","Hockey","Cricket","Volleyball"]
 
 # adding new elements
