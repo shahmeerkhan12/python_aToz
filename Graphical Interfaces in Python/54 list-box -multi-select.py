@@ -13,7 +13,9 @@ def add():
    list.config(height=list.size())
 
 def delete():
-   list.delete(list.curselection()) # select and delete the item with cursor upon
+   
+   for index in reversed(list.curselection()):
+      list.delete(index)
    list.config(height=list.size()) # reset the size after deletion of item
 
 
@@ -25,7 +27,8 @@ label = Label(window,text=("Food List"), font=("arial",16),)
 
 label.pack()
 
-list = Listbox(window,bg="#ffffde",font=("arial",14))
+list = Listbox(window,bg="#ffffde",font=("arial",14),
+               selectmode=MULTIPLE) # WORKS FOR SELECTING MULTIPLE ITEMS WITHIN LISTS
 
 list.pack()
 
