@@ -1,25 +1,25 @@
 # widget : gui elements like buttons, lables, images, text boxes, etc 
 # windows : a container to hold the widgets
 
-from tkinter import FLAT, RAISED, Label, Tk, PhotoImage,Image
+from tkinter import *
 from PIL import Image, ImageTk
 
 window = Tk() # instantiate the windows object
 
-window.geometry("800x800")
+window.geometry("600x400")
 #adding the title to the window
 window.title("Python GUI Creation")
 # it is necessary to provide the full path, even if the image file is located in the same directory 
 # adding the icon to the title bar
-icon = PhotoImage(file=r'C:\Users\Shamir Khan\py prog\phase 2\48 GUI\icon2.png')
+icon = PhotoImage(file="Graphical Interfaces in Python\\burger.png")
 window.iconphoto(True,icon)
-
+# photo_image = tk.PhotoImage(file=path_to_image)
 
 
 # creating Labels
 
-logo_image = Image.open(r'C:\Users\Shamir Khan\py prog\phase 2\48 GUI\awkum.jpg') #this step is optional
-photo_image = ImageTk.PhotoImage(logo_image)
+# logo_image = Image.open(r'C:\\Users\\Shamir Khan\\py prog\\phase 2\\48 GUI\\awkum.jpg') #this step is optional
+photo_image = PhotoImage("awkum.jpg")
 
 label = Label(window,text="Welcome to Python",
               font=('Arial',20,'bold'),
