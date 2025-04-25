@@ -29,17 +29,17 @@ Country = {'England':'Oxford',
 # Country.clear()
 
 # print()
-for key,value in Country.items():
-   print(key, value)
+# for key,value in Country.items():
+#    print(key, value)
 
 # we are printing the keys only
-# for key in Country:
-#    print(key)
-# print()
+for key in Country:
+   print(key)
+print()
 
 # we are printing the values in the dict
-# for value in Country:
-#    print(Country.get(value))
+for value in Country:
+   print(Country.get(value))
 # print()
 
-# remember the Dict.get(some_variable) will return the keys in the dict if exists else default
+# remember the Dict.keys() will return the keys in the dict if exists else default
